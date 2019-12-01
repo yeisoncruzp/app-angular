@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>LISTA DE PELICULAS </h1>
+
+    <div class="loading" *ngIf="!load; else showList">   
+        <h1>Cargando Listado...</h1>
+    </div>
+    <ng-template #showList>
+        <div class="catalog" *ngFor="let item of data">
+            <div class="con-image">
+                <img [src]="item.multimedia.src" [alt]="item.byline">
+            </div>
+            <div class="con-desc">
+                <div class="desc">
+                    <h3>{{item.display_title}}</h3>
+                </div>
+                <div class="con_see">
+                    <p class="seeMore" (click)="openModal(item)">
+                        Ver mas...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <app-detail *ngIf="showModal !== 'false' " class="modal" [movie]="movie" (outputToParent)="GetOutputVal($event)"></app-detail>
+
+</div>

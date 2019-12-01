@@ -1,0 +1,52 @@
+*{
+    color: #fff;
+}
+.container-modal{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.con_image{
+    width: 45%;
+    padding: 2%;
+    padding-top:7%;
+}
+.con_image > img{
+    width: 95%;
+    border: 6px solid #fff;
+}
+.con_info{
+    width: 50%;
+    padding-top:3%;
+}
+.con_publication{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.con_opening{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+#close{
+    width: 7%;
+    float: right;
+    margin-right: 7%;
+    cursor: pointer;
+}
+.con_close > img{
+    float: right;
+}
+a{
+    color: aqua;
+}
+
+@media screen and (max-width:430px){
+    .con_image, .con_info{
+        width: 100%;
+    }
+}
